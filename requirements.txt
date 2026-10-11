@@ -1,0 +1,7 @@
+biopython>=1.80
+numpy
+matplotlib
+requests
+pyrama>=2.0
+tmtools
+pytest
