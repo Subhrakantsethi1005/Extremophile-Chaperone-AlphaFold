@@ -1,0 +1,17 @@
+[project]
+name = "ecaf"
+version = "1.0.0"
+description = "Structural prediction and conformational validation of uncharacterized extremophile chaperones with AlphaFold (UBT521 Group-15)"
+requires-python = ">=3.9"
+dependencies = ["biopython>=1.80", "numpy", "matplotlib", "requests", "pyrama>=2.0"]
+
+[project.optional-dependencies]
+tm = ["tmtools"]
+test = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
