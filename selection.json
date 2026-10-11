@@ -1,0 +1,54 @@
+{
+  "_comment": "Candidate-selection criteria (proposal section 3.2). Edit, then re-run `python -m ecaf select`. Every value used is copied into results/provenance.json.",
+  "target_n": 5,
+  "max_pairwise_identity": 0.40,
+  "max_ambiguous_fraction": 0.01,
+  "require_initial_met": true,
+  "exclude_protein_level_evidence": true,
+  "exclude_with_experimental_structure": true,
+  "chaperone_query_terms": [
+    "keyword:KW-0143",
+    "protein_name:chaperone",
+    "protein_name:chaperonin",
+    "protein_name:\"heat shock\"",
+    "protein_name:prefoldin",
+    "protein_name:thermosome"
+  ],
+  "chaperone_classes": [
+    {"name": "sHSP (Hsp20/alpha-crystallin)", "patterns": ["hsp20", "small heat shock", "alpha-crystallin", "hspa", "hsp16", "hsp17", "hsp18", "shsp"], "min_len": 110, "max_len": 220},
+    {"name": "Prefoldin", "patterns": ["prefoldin"], "min_len": 100, "max_len": 180},
+    {"name": "GrpE", "patterns": ["grpe"], "min_len": 150, "max_len": 260},
+    {"name": "DnaJ/Hsp40", "patterns": ["dnaj", "hsp40"], "min_len": 280, "max_len": 420},
+    {"name": "Hsp60/thermosome/GroEL", "patterns": ["thermosome", "chaperonin", "groel", "hsp60", "cpn60"], "min_len": 500, "max_len": 600},
+    {"name": "Hsp70/DnaK", "patterns": ["dnak", "hsp70"], "min_len": 580, "max_len": 680},
+    {"name": "Hsp90/HtpG", "patterns": ["htpg", "hsp90"], "min_len": 600, "max_len": 720},
+    {"name": "Hsp100/ClpB", "patterns": ["clpb", "hsp100", "clp"], "min_len": 750, "max_len": 920}
+  ],
+  "organisms": [
+    {"name": "Pyrococcus", "category": "hyperthermophile"},
+    {"name": "Thermococcus", "category": "hyperthermophile"},
+    {"name": "Methanocaldococcus", "category": "hyperthermophile"},
+    {"name": "Aeropyrum", "category": "hyperthermophile"},
+    {"name": "Pyrobaculum", "category": "hyperthermophile"},
+    {"name": "Thermotoga", "category": "hyperthermophile"},
+    {"name": "Aquifex", "category": "hyperthermophile"},
+    {"name": "Saccharolobus", "category": "thermoacidophile"},
+    {"name": "Sulfolobus", "category": "thermoacidophile"},
+    {"name": "Thermoplasma", "category": "thermoacidophile"},
+    {"name": "Picrophilus", "category": "thermoacidophile"},
+    {"name": "Acidithiobacillus", "category": "acidophile"},
+    {"name": "Thermus", "category": "thermophile"},
+    {"name": "Halobacterium", "category": "halophile"},
+    {"name": "Haloferax", "category": "halophile"},
+    {"name": "Haloarcula", "category": "halophile"},
+    {"name": "Deinococcus", "category": "radiation/desiccation-resistant"},
+    {"name": "Psychrobacter", "category": "psychrophile"},
+    {"name": "Colwellia", "category": "psychrophile"}
+  ],
+  "procedural_control": {
+    "_comment": "Known chaperone with an experimental structure (proposal 3.7): M. jannaschii Hsp16.5, crystal structure PDB 1SHS.",
+    "accession": "Q57733",
+    "pdb_id": "1SHS",
+    "chain": "A"
+  }
+}
